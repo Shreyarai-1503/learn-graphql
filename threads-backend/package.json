@@ -1,0 +1,21 @@
+{
+  "name": "threads-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node build/index.js",
+    "build" : "tsc-watch --onSuccess \"npm start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "tsc-watch": "^6.2.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

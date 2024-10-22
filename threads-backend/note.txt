@@ -1,0 +1,24 @@
+1. 
+npm i typescript -D //dev dependency
+npm i express
+npx tsc --init   //create a new tsconfig.json
+
+2. 
+tsconfig.json
+"rootDir": "./src", 
+"outDir": "./build",
+
+3.
+npm i --save-dev @types/express
+npm add tsc-watch -D  //to compile the source code
+
+
+4.
+"scripts": {
+    "start" : "node ",
+    "build" : "tsc-watch"  //watch local TS config --> src directory
+},
+
+
+try--> npm run build
+node build/index.js
