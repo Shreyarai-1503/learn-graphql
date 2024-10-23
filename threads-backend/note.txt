@@ -15,10 +15,17 @@ npm add tsc-watch -D  //to compile the source code
 
 4.
 "scripts": {
-    "start" : "node ",
     "build" : "tsc-watch"  //watch local TS config --> src directory
 },
 
 
 try--> npm run build
-node build/index.js
+       node build/index.js
+
+5.
+"scripts": {
+    "start" : "node build/index.js",
+    "build" : "tsc-watch --onSuccess \"npm start\""
+},
+
+npm run build
