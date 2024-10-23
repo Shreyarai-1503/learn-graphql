@@ -37,3 +37,7 @@ The expressMiddleware function enables you to attach Apollo Server to an Express
 The expressMiddleware function accepts two arguments:
     The first required argument is an instance of ApolloServer that has been started by calling its start method
     Second optional argument is an object for configuring ApolloServer
+
+the GraphQL server handles and works with JSON data hence we need body-parser Middleware
+
+6. Error: Query root type must be provided.  due to empty typeDefs and resolvers
