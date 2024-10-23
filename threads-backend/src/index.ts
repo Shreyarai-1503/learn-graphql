@@ -11,11 +11,13 @@ async function init() {
         typeDefs: `
             type Query {
                 hello: String
+                say(name: String): String
             }
         `,                                              //Schema goes here
         resolvers: {
             Query: {
-                hello: () => 'Hello World'
+                hello: () => 'Hello World',
+                say: (_, {name} : {name: string}) => `Hello ${name}`
             }
         }                                               //Functions to resolve queries and mutations
     });
