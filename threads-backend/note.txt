@@ -43,3 +43,23 @@ the GraphQL server handles and works with JSON data hence we need body-parser Mi
 6. Error: Query root type must be provided.  due to empty typeDefs and resolvers
 
 7. Containers for Postgresql and Redis - docker-compose.yml
+
+8. Prisma set-up
+npm install prisma ts-node @types/node --save-dev
+npx prisma init
+
+DATABASE_URL="postgresql://username:password@localhost:5432/DB_NAME?schema=public"
+
+Terminal:
+    docker ps 
+    docker exec -it container-id bash
+    su postgres(DB_User)  
+    postgresql
+    \l 
+    \c DB_Name
+    \d
+
+or if not working then click on the container ---> go to EXEC ---> su postgres(DB_User)  
+
+npx prisma migrate dev --name create_users_table
+
