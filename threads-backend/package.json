@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start" : "node build/index.js",
-    "build" : "tsc-watch --onSuccess \"npm start\""
+    "start": "node build/index.js",
+    "build": "tsc-watch --onSuccess \"npm start\""
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "@apollo/server": "^4.11.0",
     "express": "^4.21.1"
   }
 }

@@ -29,3 +29,11 @@ try--> npm run build
 },
 
 npm run build
+
+6. Apollo GraphQL express
+API Reference: express Middleware
+
+The expressMiddleware function enables you to attach Apollo Server to an Express server.
+The expressMiddleware function accepts two arguments:
+    The first required argument is an instance of ApolloServer that has been started by calling its start method
+    Second optional argument is an object for configuring ApolloServer
