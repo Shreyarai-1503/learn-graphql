@@ -19,6 +19,8 @@ async function init() {
         res.json({ message: 'Server is up and running' });
     });
 
+    //Expose the GraphQL server
+    app.use('/graphql', expressMiddleware(gqlServer));
 
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
