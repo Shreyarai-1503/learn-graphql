@@ -52,12 +52,12 @@ DATABASE_URL="postgresql://username:password@localhost:5432/DB_NAME?schema=publi
 
 Terminal:
     docker ps 
-    docker exec -it container-id bash
-    su postgres(DB_User)  
-    postgresql
-    \l 
-    \c DB_Name
-    \d
+        docker exec -it container-id bash
+        su postgres(DB_User)  
+            psql
+                \l 
+                \c DB_Name
+                \d
 
 or if not working then click on the container ---> go to EXEC ---> su postgres(DB_User)  
 
