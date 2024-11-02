@@ -59,6 +59,12 @@ class UserService {
 
         return token;
     }
+
+    public static decodeToken(token: string) {
+        if (!env.JWT_SECRET) throw new Error("JWT_SECRET is not defined");
+        
+        return JWT.verify(token, env.JWT_SECRET);
+    }
 }
 
 export default UserService;

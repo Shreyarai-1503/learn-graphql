@@ -4,6 +4,14 @@ const queries = {
     getUserToken: async(_: any, payload: GetUserTokenPayload) => {
         const token = await UserService.getUserToken(payload);
         return token;
+    },
+
+    getCurrentUser: async(_:any, parameters:any, context:any) => {
+        if(context && context.user) {
+            return context.user.id;
+        }
+        
+        throw new Error("Cannot get current user");
     }
 }
 
